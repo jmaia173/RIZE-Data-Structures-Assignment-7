@@ -1,0 +1,15 @@
+   A tree is appropriate for the doctor structure because the hospital hierarchy is naturally hierarchical: each doctor has a 
+   parent they report to and up to two direct reports. A binary tree mirrors that relationship directly, and recursion lets us 
+   handle any subtree the same way we handle the whole tree.
+
+   Software engineers choose a traversal based on what they need. Preorder visits a parent before its children, which is useful 
+   for copying a tree or printing an org chart from the top down. Inorder visits the left side, then the node, then the right side; 
+   it returns sorted output in a binary search tree and gives a consistent left-to-right reading order. Postorder visits children 
+   before the parent, which suits tasks where reports must be handled first, such as deleting a tree safely or calculating totals 
+   that depend on every subordinate.
+
+   Heaps help simulate real-time systems like emergency intake because the most urgent patient must always be served next, 
+   regardless of arrival time. A min-heap keeps the lowest urgency number at the root, so peek is O(1) and both insert and 
+   remove_min take O(log n) time after reordering with heapify_up and heapify_down. Sorting the whole list after every arrival 
+   would be slower and wasteful. A plain queue would serve patients by arrival order and could leave a critical patient waiting 
+   behind minor cases. The heap gives fast, correct prioritization as patients continuously arrive and leave.
