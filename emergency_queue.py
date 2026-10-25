@@ -57,9 +57,9 @@ class MinHeap:
 
 if __name__ == "__main__":
     heap = MinHeap()
-    heap.insert(Patient("Jordan", 3))
-    heap.insert(Patient("Taylor", 1))
-    heap.insert(Patient("Avery", 5))
+    heap.insert(Patient("Joao", 3))
+    heap.insert(Patient("Nevan", 1))
+    heap.insert(Patient("Nino", 5))
     heap.print_heap()
     print(heap.peek().name, heap.peek().urgency)
     print(heap.remove_min().name)

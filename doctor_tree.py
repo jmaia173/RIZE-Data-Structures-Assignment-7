@@ -50,16 +50,16 @@ class DoctorTree:
 
 if __name__ == "__main__":
     tree = DoctorTree()
-    tree.root = DoctorNode("Dr. Croft")
-    tree.insert("Dr. Croft", "Dr. Goldsmith", "right")
-    tree.insert("Dr. Croft", "Dr. Phan", "left")
-    tree.insert("Dr. Phan", "Dr. Carson", "right")
-    tree.insert("Dr. Phan", "Dr. Morgan", "left")
+    tree.root = DoctorNode("Dr. Maia")
+    tree.insert("Dr. Maia", "Dr. Gavriel", "right")
+    tree.insert("Dr. Maia", "Dr. Englin", "left")
+    tree.insert("Dr. Englin", "Dr. Horn", "right")
+    tree.insert("Dr. Englin", "Dr. Meyer", "left")
 
     print(tree.preorder(tree.root))
     print(tree.inorder(tree.root))
     print(tree.postorder(tree.root))
 
     tree.insert("Dr. Nobody", "Dr. X", "left")   # missing parent
-    tree.insert("Dr. Croft", "Dr. X", "middle")  # invalid side
-    tree.insert("Dr. Croft", "Dr. X", "left")    # occupied side
+    tree.insert("Dr. Maia", "Dr. X", "middle")  # invalid side
+    tree.insert("Dr. Maia", "Dr. X", "left")    # occupied side
